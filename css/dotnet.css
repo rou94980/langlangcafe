@@ -1,0 +1,486 @@
+main {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.main-project-content,
+.sponsor-list,
+.other-project {
+  width: 100%;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+.main-project-banner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+.pic-wrapper {
+  width: 100%;
+  border-bottom: 1px solid var(--color-gray-d);
+}
+.text-wrapper {
+  width: 100%;
+  border-top: 1px solid var(--color-gray-d);
+  border-bottom: 1px solid var(--color-gray-d);
+}
+
+.main-project-banner .pic {
+  width: 100%;
+  /* border-radius: 0 50px 0 0; */
+  overflow: hidden;
+}
+.main-project-banner .pic img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* .main-project-banner文字處理 */
+.main-project-banner .text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10% auto;
+}
+.main-project-banner .text h2 {
+  display: block;
+  width: 100%;
+  padding: 0 4% 4% 4%;
+  text-align: center;
+  color: var(--color-accent-1);
+}
+.main-project-banner .progress-circle-big {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 圓形進度條 */
+.progress-circle-big .pie {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  background-image: conic-gradient(
+    var(--color-accent-1) 0% 80%,
+    var(--color-gray-d) 80%
+  );
+}
+
+.progress-circle-big .text {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  margin: auto;
+  color: var(--color-accent-1);
+  background-color: #ffffff;
+}
+
+.main-project-banner .text .countdown {
+  margin: auto 0px auto 10%;
+}
+.main-project-banner .text .countdown span {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  color: var(--color-accent-1);
+  font-weight: bold;
+}
+
+/* 主要募資專案內容 */
+.main-project-content h3 {
+  text-align: center;
+  padding: 10vh 2vh 0 2vh;
+}
+
+.main-project-content > p:nth-child(2) {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-gray);
+  line-height: 5;
+}
+
+.main-project-content .container {
+  margin: 4vh auto;
+  box-sizing: border-box;
+}
+/* 讓每張卡片等高 */
+.main-project-content .col {
+  display: flex;
+  align-items: stretch;
+}
+
+/* item-plan */
+/* item-plan 圖片 */
+.main-project-content .item-plan {
+  border: 1px solid var(--color-gray-d);
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: scaleX(1);
+  transition: transform 0.5s ease 0s;
+}
+.main-project-content .item-plan:hover {
+  transform: scaleX(-1);
+}
+.main-project-content .item-plan::after {
+  content: " ";
+  background-image: url("../image/dotnet/dotnet-plan-hover.svg");
+  background-color: rgba(180, 166, 153, 0.9);
+  backdrop-filter: blur(5px);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  transform: scaleX(-1);
+  transition: transform 0.5s ease 0s;
+}
+.main-project-content .item-plan:hover::after {
+  opacity: 1;
+  transform: scaleX(-1);
+}
+
+.main-project-content .item-plan .pic {
+  position: relative;
+  border-bottom: 1px solid var(--color-gray-d);
+}
+.item-plan img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* 需求數量標籤 */
+.main-project-content .item-plan .pic p {
+  font-size: 0.75rem;
+  color: #ffffff;
+  background-color: var(--color-accent-1);
+  text-align: center;
+  padding: 10px 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.main-project-content .item-plan .pic span {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  margin: 0px 5px;
+}
+
+/* item-plan 文字 */
+.main-project-content .item-plan .text {
+  padding: 12px;
+}
+.main-project-content .item-plan .text p {
+  font-size: 0.75rem;
+  color: var(--color-gray);
+  padding: 8px 0;
+  margin: 20px 0;
+}
+.main-project-content .item-plan .text .price,
+.planinfo .price > span {
+  font-family: "Inter", sans-serif;
+  text-align: end;
+  font-size: 1.25rem;
+  color: var(--color-main);
+}
+
+.item-plan p > br {
+  display: none;
+}
+
+/* 主要募資專案贊助者名單 */
+.sponsor-list {
+  padding: 0 4vw;
+}
+
+.sponsor-list h3 {
+  width: fit-content;
+  margin: 200px auto 4vh auto;
+  position: relative;
+}
+.sponsor-list h3::after {
+  content: "";
+  background-image: url("../image/dotnet/dotnet-thankyou.svg");
+  width: 140px;
+  height: 96px;
+  position: absolute;
+  top: -100px;
+  left: calc(50% - 70px);
+  transform: rotate(-20deg);
+}
+
+.sponsor-list .wrapper {
+  padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: stretch;
+  border-radius: 5px;
+}
+
+.sponsor-list .wrapper .item {
+  margin: 10px 10px 20px 10px;
+  padding: 20px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid var(--color-gray-d);
+  height: 80%;
+}
+
+.sponsor-list .wrapper .item h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  color: var(--color-accent-1);
+}
+.sponsor-list .wrapper .item ul {
+  text-align: center;
+}
+.sponsor-list .wrapper .item li {
+  color: var(--color-black);
+  line-height: 1.5;
+}
+
+/* 更多募資專案 */
+.other-project {
+  padding: 2%;
+  margin: auto;
+}
+.other-project h3 {
+  text-align: center;
+  padding: 10vh 2vh 10vh 2vh;
+}
+.other-project .item {
+  padding: 20px 20px 0 0;
+  box-sizing: border-box;
+}
+.other-project .card {
+  border: 1px solid var(--color-gray-d);
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+  margin: 20px 0;
+  position: relative;
+}
+.other-project .card img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.other-project .text {
+  padding: 5%;
+}
+
+.other-project .text h4 {
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.other-project .text a {
+  text-align: left;
+  line-height: 50px;
+  margin: 10px;
+  border-bottom: 1px solid var(--color-black);
+}
+
+/* .progress-rectangle {
+  width: 100%;
+} */
+.progress-rectangle > progress,
+.progress-rectangle .progress-bar {
+  width: 95%;
+  box-sizing: border-box;
+  margin: 20px 2.5%;
+}
+.progress-rectangle div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+/* progress */
+.progress-bar {
+  width: 95%;
+  border-radius: 10px;
+  border: 1px solid var(--color-gray);
+  overflow: hidden;
+}
+.progress-bar span {
+  display: block;
+  width: 80%;
+  height: 7px;
+  background-color: var(--color-accent-1);
+}
+
+.planinfo-wrap {
+  position: fixed;
+  width: 100vw;
+  /* 扣除導覽列高 */
+  height: calc(100vh - 60px);
+  background-color: #494949c5;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  /* 子元素水平垂直置中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.planinfo-wrap .planinfo {
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+  max-height: 85vh;
+  padding: 2.5%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.planinfo .picwrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.planinfo .textwrap {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.planinfo .picwrap .pic {
+  overflow: hidden;
+  width: 100%;
+}
+.planinfo .pic img {
+  width: 100%;
+  height: 100%;
+
+  vertical-align: top;
+}
+.planinfo .close {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  z-index: 30;
+  padding: 20px;
+  border: 0px solid transparent;
+  background-color: transparent;
+}
+.textwrap div:nth-child(4) {
+  display: flex;
+  flex-wrap: wrap;
+}
+.planinfo .price {
+  margin: auto;
+  min-width: 100px;
+}
+.quantity {
+  width: calc(100% - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.minus,
+.num,
+.plus {
+  border: 1px solid var(--color-gray);
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  margin: 0 2%;
+}
+.minus,
+.plus {
+  width: 10%;
+  padding: 2px;
+  box-sizing: border-box;
+}
+.num {
+  width: 50%;
+  border-radius: 0;
+}
+
+#additemBtn {
+  padding: 10px;
+}
+
+/* ----------------RWD------------------ */
+@media screen and (min-width: 768px) {
+  .main-project-banner .pic-wrapper {
+    width: 50%;
+  }
+  .main-project-banner .text-wrapper {
+    width: 50%;
+    margin: 0;
+  }
+  .main-project-banner .pic-wrapper,
+  .main-project-banner .text-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .main-project-banner .pic,
+  .main-project-banner .text {
+    margin: auto;
+  }
+
+  .progress-circle-big .pie {
+    width: 130px;
+    height: 130px;
+  }
+  .progress-circle-big .text {
+    width: 90px;
+    height: 90px;
+    font-size: 30px;
+  }
+  .item-plan p > br {
+    display: block;
+  }
+  .sponsor-list h3::after {
+    top: -80px;
+    left: auto;
+    right: -100px;
+    transform: rotate(0);
+  }
+  .sponsor-list .wrapper {
+    padding: 4vw 4vh;
+  }
+  .planinfo-wrap .planinfo {
+    min-width: 450px;
+    max-width: 550px;
+    flex-wrap: nowrap;
+  }
+  .planinfo .picwrap {
+    width: 35%;
+    padding: 10px;
+  }
+  .planinfo .textwrap {
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .planinfo-wrap {
+    height: 100vh;
+  }
+}

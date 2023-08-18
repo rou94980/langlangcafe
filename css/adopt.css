@@ -1,0 +1,46 @@
+/* 進度條 */
+.progress-bar {
+  width: 90%;
+  margin: 10vh auto;
+}
+.progress-bar .list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar li {
+  width: 20%;
+}
+
+.line {
+  width: 10%;
+  height: 3px;
+  background-color: var(--color-gray-d);
+}
+
+.progress-bar img {
+  width: 100%;
+  vertical-align: top;
+  background-color: var(--color-gray-d);
+  border-radius: 50%;
+}
+.progress-bar img.active,
+.progress-bar div.active {
+  background-color: var(--color-main);
+}
+h2 {
+  text-align: center;
+}
+
+/* ----------------RWD------------------ */
+
+@media screen and (min-width: 768px) {
+  .progress-bar {
+    width: 50%;
+  }
+  .progress-bar .line {
+    width: 20%;
+  }
+}

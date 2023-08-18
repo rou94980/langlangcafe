@@ -1,0 +1,180 @@
+hr {
+  width: 95%;
+  margin: 5% auto;
+}
+.logo img {
+  width: 100%;
+  vertical-align: top;
+}
+main {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+/* 店家資訊store-info */
+.store-info {
+  position: relative;
+  margin: 2rem 0;
+  /* 內容置中 */
+  display: flex;
+  justify-content: center;
+}
+
+.store-info > div {
+  width: 80%;
+  height: 265px;
+  border: 1px solid var(--color-gray);
+  border-radius: 25px;
+  /* .logo定位 */
+  position: relative;
+  /* 內容文字置中 */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.store-info .logo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  border-radius: 25px;
+  overflow: hidden;
+  z-index: -10;
+}
+.store-info .logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  object-position: left 0 bottom 0;
+}
+
+.store-info .txt {
+  min-width: 250px;
+  background-color: #ffffff87;
+  backdrop-filter: blur(5px);
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+.store-info .txt-hasicon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.store-info .txt-hasicon i {
+  width: 25px;
+}
+
+/* ------------ 表單 ------------*/
+/*用餐人數 桌型 日期 */
+form > section {
+  margin: 30px;
+}
+.booking-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.booking-people,
+.table-type,
+.booking-date {
+  width: 100%;
+  /* 對齊右邊線 */
+  position: relative;
+  left: -5px;
+}
+
+.booking-people > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.booking-people > div div {
+  width: 100%;
+}
+.booking-info select,
+.booking-date input {
+  width: calc(100% - 10px);
+}
+.booking-time > div {
+  margin: 20px 0;
+}
+.booking-time .btn-border {
+  padding: 10px 50px;
+}
+.booking-time .time {
+  position: relative;
+  left: -10px;
+  margin: 2px 0;
+  /* 對齊左側處理 */
+}
+/* 文字 處理 */
+
+.booking-info h3 {
+  margin: 20px 0 10px 5px;
+  /* 5%為了對齊左側 */
+}
+.booking-time h3 {
+  margin: 20px 0;
+}
+.booking-info p,
+.booking-time p {
+  font-size: 0.875rem;
+  /* 14px */
+  padding: 5px 0;
+  line-height: 1.28;
+  color: var(--color-gray);
+}
+
+/* booking-now */
+
+.booking-now {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 30;
+  position: sticky;
+  margin: 4% auto 0 auto;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
+  padding: 4% 0;
+}
+.booking-now p {
+  font-size: 0.875rem;
+  /* 14px */
+  line-height: 1.28;
+  color: var(--color-gray);
+}
+.next-step {
+  width: 90%;
+  margin: auto;
+}
+.md-hidden {
+  display: none;
+}
+/* ----------------RWD------------------ */
+
+@media screen and (min-width: 768px) {
+  .booking-people {
+    width: 50%;
+    /* 對齊右邊線 */
+    left: -5px;
+  }
+  .table-type,
+  .booking-date {
+    width: 25%;
+  }
+
+  .booking-now {
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .md-hidden {
+    display: inline;
+  }
+}

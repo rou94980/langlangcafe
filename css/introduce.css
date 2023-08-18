@@ -1,0 +1,192 @@
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.bg .pic {
+  width: 60%;
+  margin: auto;
+  transition: 2.5s;
+}
+.bg .pic img {
+  width: 100%;
+  vertical-align: top;
+}
+.introduce {
+  width: 90%;
+  margin: auto;
+  /* background-color: var(--color-main); */
+  border: 2px solid var(--color-gray-d);
+  border-radius: 25px;
+  padding: 10vw 4vw;
+  box-sizing: border-box;
+}
+.introduce article {
+  margin: 0 10px 10% 10px;
+}
+h2 {
+  margin: 0 0 10% 0;
+}
+.container h2 {
+  display: none;
+}
+
+/* 卡片 */
+/* 讓每張卡片等高 */
+.col {
+  display: flex;
+  align-items: stretch;
+}
+.card {
+  background-color: var(--color-main);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card .pic {
+  overflow: hidden;
+}
+.card .pic img {
+  width: 100%;
+  vertical-align: top;
+  transition: 0.5s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.row div:first-child > .card {
+  background-color: var(--color-accent-1);
+}
+
+.card h3,
+.card span,
+.card p {
+  color: #ffffff;
+}
+
+.card .txt {
+  padding: 5%;
+}
+
+.card .txt > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.card .txt span {
+  margin-left: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.card .txt p {
+  margin: 20px 0;
+}
+
+.gohome {
+  display: none;
+}
+
+/* ----------------RWD------------------ */
+@media screen and (min-width: 1024px) {
+  .bg .pic {
+    width: 50%;
+  }
+  .container h2 {
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+  }
+  .introduce {
+    padding: 10%;
+  }
+  .introduce article {
+    margin: 0 10px 0 10px;
+  }
+  .gohome {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: -60px;
+    top: -80px;
+    padding: 5% 5% 0 0;
+  }
+  .gohome .txtpic {
+    width: 60%;
+    margin-left: auto;
+    transform: rotate(-10deg);
+    animation: shake 1s linear infinite;
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.3));
+    /* 調整與 dog 相對位置 */
+    position: relative;
+    left: 30px;
+  }
+  .txtpic img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(-3deg);
+    }
+    100% {
+      transform: rotate(-10deg);
+    }
+  }
+  .txtpic:hover {
+    animation: none;
+  }
+  /* 小彩蛋 */
+
+  .touchhead {
+    width: 250px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  /* 感應區 */
+  .ia {
+    z-index: 100;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+  }
+  .hand {
+    width: 50%;
+    top: 40px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+  }
+
+  .hand img,
+  .dog img {
+    width: 100%;
+  }
+  .dog {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+  }
+
+  .love {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 60%;
+    right: 5%;
+    z-index: 20;
+    transition: opacity 1s;
+  }
+}

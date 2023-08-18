@@ -1,0 +1,100 @@
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+main > section:nth-child(2) {
+  flex-direction: row-reverse;
+}
+.list-drink,
+.list-dessert {
+  padding: 4vh 0;
+  margin: 5% auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.pic-wrapper,
+.text-wrapper {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 15px;
+}
+.text-wrapper > .text {
+  width: 90%;
+  margin: auto;
+}
+
+/* 菜單圖片 */
+
+.list-dessert .pic,
+.list-drink .pic {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  /* 貼齊上方 左右居中 */
+  margin: 0 auto;
+}
+.pic > img {
+  object-fit: cover;
+  vertical-align: top;
+}
+.text h2 {
+  margin: 20px 0;
+}
+.text .item {
+  display: flex;
+}
+.list-drink .item > span {
+  margin: 5px 0;
+  width: 35%;
+  min-width: 100px;
+}
+.list-dessert .item > span {
+  margin: 5px 0;
+  width: 40%;
+  min-width: 150px;
+}
+.item > span:last-child {
+  text-align: end;
+}
+
+/* 冷熱標示處理 */
+.item > .hot-ice {
+  min-width: 100px;
+  margin: 5px 0;
+}
+.hot-ice > .circle {
+  display: inline-block;
+  width: 20px;
+  font: 12px bolder;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: var(--color-main);
+  color: #ffffff;
+}
+
+.list-dessert .rule {
+  width: fit-content;
+  margin: 30% auto 0px;
+}
+.list-dessert .rule p {
+  padding: 8px;
+}
+
+/* ----------------RWD------------------ */
+@media screen and (min-width: 768px) {
+  .pic-wrapper,
+  .text-wrapper {
+    width: calc(40% - 30px);
+  }
+  .item > span {
+    margin: 5px 0;
+    min-width: 150px;
+  }
+}

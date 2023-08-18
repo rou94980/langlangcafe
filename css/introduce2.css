@@ -1,0 +1,121 @@
+.introduce {
+  padding: 5%;
+}
+.dogcard {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.dogcard .pic {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 10% 0;
+}
+
+.dogcard .largepic {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dogcard .smallpic {
+  width: 20%;
+  margin: 20px 20px 20px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.smallpics {
+  display: flex;
+}
+.largepic img,
+.smallpic img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.dogcard .txt {
+  width: 100%;
+}
+/* 姓名 + 出生區塊 */
+.dogcard .txt > div:first-child {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+}
+.dogcard h2 {
+  width: fit-content;
+  display: inline-block;
+  line-height: 1.4;
+  /* 覆蓋 introduce.css設定 */
+  margin: 0 10% 0 0;
+}
+
+.dogcard h3 {
+  line-height: 2.5;
+  color: var(--color-main);
+}
+.dogcard h2 + span {
+  color: var(--color-main);
+}
+.dogcard .txt > div + div {
+  margin: 5% 0;
+}
+table {
+  text-align: left;
+
+  background-color: var(--color-main);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+table th {
+  color: #ffffff;
+  margin-top: 10px;
+  display: block;
+}
+table td {
+  font-size: 12px;
+  color: #ffffff;
+  display: block;
+}
+table > th + td {
+  margin-top: 5%;
+}
+
+@media screen and (min-width: 768px) {
+  .dogcard .pic {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .dogcard .txt {
+    padding-left: 5%;
+    box-sizing: border-box;
+    width: 60%;
+  }
+
+  table th {
+    display: table-cell;
+  }
+  table td {
+    display: table-cell;
+    padding-left: 5%;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  table td {
+    width: 30%;
+  }
+  .introduce {
+    padding: 10% 5%;
+  }
+}

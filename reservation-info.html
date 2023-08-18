@@ -1,0 +1,258 @@
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="image/favicon.ico" />
+    <!-- cssreset & css -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/reservation-info.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- JS -->
+    <script async src="js/base.js"></script>
+    <script async src="js/reservation-info.js"></script>
+    <title>線上訂位｜浪浪咖啡島</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <div class="main-logo">
+          <a href="index.html"><img src="image/logo.svg" alt="網站logo" /></a>
+        </div>
+        <nav class="main-nav" id="main-nav">
+          <div>
+            <a href="menu.html">菜單</a>
+            <a class="active" href="#">線上訂位</a>
+            <a href="introduce.html">認識浪浪</a>
+          </div>
+
+          <div>
+            <a href="dotnet.html">罐罐贊助</a>
+            <a href="adopt.html">帶浪浪回家</a>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </nav>
+        <button class="hb" id="hb">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <h1 class="fs-h-2 nav-wrapper-h1">線上訂位</h1>
+    </header>
+
+    <main>
+      <div>
+        <section class="store-info">
+          <div>
+            <div class="logo">
+              <img src="image/reservation/bg1.png" alt="" />
+            </div>
+            <div class="txt fs-p-lh">
+              <p>地　　址：基隆市赤峰街908號</p>
+              <p>營業時間：上午 10點 - 晚上 8點</p>
+              <div class="txt-hasicon">
+                <div>
+                  <i class="fa-solid fa-phone" style="color: #aaaaaa"></i>
+                  <span>02-25711234</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-map" style="color: #aaaaaa"></i
+                  ><a href="#">查看地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <form class="form" id="reservation-info-form">
+        <section class="booking-info">
+          <hr />
+          <div class="booking-people">
+            <h3 class="required">用餐人數</h3>
+            <div>
+              <div>
+                <select
+                  class="booking-select"
+                  id="booking-people-adult"
+                  required
+                >
+                  <option value="" disabled selected>請選擇</option>
+                  <option value="0大">0位大人</option>
+                  <option value="1大">1位大人</option>
+                  <option value="2大">2位大人</option>
+                  <option value="3大">3位大人</option>
+                  <option value="4大">4位大人</option>
+                  <option value="5大">5位大人</option>
+                  <option value="6大">6位大人</option>
+                </select>
+              </div>
+              <div>
+                <select
+                  class="booking-select"
+                  id="booking-people-child"
+                  required
+                >
+                  <option value="" disabled selected>請選擇</option>
+                  <option value="0小">0位小孩</option>
+                  <option value="1小">1位小孩</option>
+                  <option value="2小">2位小孩</option>
+                  <option value="3小">3位小孩</option>
+                  <option value="4小">4位小孩</option>
+                  <option value="5小">5位小孩</option>
+                  <option value="6小">6位小孩</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="table-type">
+            <label><h3 class="required">桌型</h3></label>
+            <select class="booking-select" id="table-type" required>
+              <option value="" disabled selected>請選擇</option>
+              <option value="不指定">不指定</option>
+              <option value="吧檯（較不會和狗狗接觸到）">
+                吧檯（較不會和狗狗接觸到）
+              </option>
+              <option value="一般桌型">一般桌型</option>
+              <option value="沙發區（狗狗可能會跑上沙發）">
+                沙發區（狗狗可能會跑上沙發）
+              </option>
+            </select>
+          </div>
+          <div class="booking-date">
+            <label><h3 class="required">日期</h3></label>
+            <input
+              class="booking-select"
+              type="text"
+              id="booking-date"
+              required
+              placeholder="年 / 月 / 日"
+              onfocus="(this.type='date')"
+            />
+          </div>
+          <article>
+            <p>可接受 1-6 位訂位（含大人與小孩）</p>
+            <p>
+              *灰色部分已經客滿，若您想要來的時段已無法預約，現場有預留少許座位給未訂位客人，也可以到現場直接候位喔！<br />
+              超過6人以上的訂位，請直接撥打電話與我們聯繫
+            </p>
+          </article>
+        </section>
+
+        <section class="booking-time">
+          <h3 class="required">用餐時段</h3>
+          <article>
+            <p>
+              *灰色部分已經客滿，若您想要來的時段已無法預約，現場有預留少許座位給未訂位客人，也可以到現場直接候位喔！<br />
+              超過6人以上的訂位，請直接撥打電話與我們聯繫
+            </p>
+          </article>
+          <div class="morning">
+            <h4>上午</h4>
+            <div class="time">
+              <button class="btn-border" type="button" value="10:00">
+                <span>10:00</span>
+              </button>
+            </div>
+          </div>
+          <div class="afternoon">
+            <h4>下午</h4>
+            <div class="time">
+              <button class="btn-border" type="button" value="12:00">
+                <span>12:00</span>
+              </button>
+              <button class="btn-border" type="button" value="14:00">
+                <span>14:00</span>
+              </button>
+              <button class="btn-border" type="button" value="16:00">
+                <span>16:00</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="evening">
+            <h4>晚上</h4>
+            <div class="time">
+              <button type="button" class="btn-border" value="18:00">
+                <span>18:00</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </form>
+    </main>
+    <div class="booking-now" style="z-index: 1">
+      <div class="next-step">
+        <div>
+          <button
+            type="button"
+            class="btn-square"
+            onclick="location.href = '#booking-people-adult'"
+          >
+            <span>立即訂位</span>
+          </button>
+        </div>
+        <div style="display: none">
+          <p>
+            <span>您已預訂<span class="md-hidden"> 浪浪咖啡島</span>：</span>
+            <label for="booking-people-adult" class="btn-waiting-check"
+              >大人人數</label
+            >
+            <label for="booking-people-child" class="btn-waiting-check"
+              >小孩人數</label
+            >
+            <label for="table-type" class="btn-waiting-check">桌型</label>
+            <label for="booking-date" class="btn-waiting-check">日期</label>
+            <label id="selecttime" class="btn-waiting-check">時段</label>
+          </p>
+          <button
+            type="button"
+            class="btn-square"
+            id="reservation-info-nextstep-btn"
+          >
+            <span>下一步填寫聯絡資訊</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-wrapper">
+      <div class="footer">
+        <div class="content">
+          <a class="logo" href="index.html"
+            ><img src="image/logo-white.svg" alt=""
+          /></a>
+          <div class="text">
+            <p>營業時間：上午 10點 - 晚上 8點</p>
+            <p>地址：基隆市赤峰街908號</p>
+            <p>電話：02-25712345</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            本網站為緯育TibaMe前端班 CDH103
+            學員專題作品，本平台僅供學習、展示之用。
+          </p>
+
+          <p>
+            Image by
+            <a
+              href="https://www.freepik.com/free-photo/woman-trying-call-rescue-dog-adoption-shelter_10296085.htm"
+              >Freepik</a
+            >、
+            <a
+              href="https://www.freepik.com/free-vector/illustration-dogs-collection_2800615.htm"
+              >Image by rawpixel.com</a
+            >
+            on Freepik
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

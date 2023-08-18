@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="image/favicon.ico" />
+    <!-- css reset & css-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script async src="js/base.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script async src="js/index.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- OwlCarouse -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <title>浪浪咖啡島｜陪你一起等家</title>
+  </head>
+  <body>
+    <header class="nav-wrapper">
+      <div class="main-logo">
+        <a href="index.html"><img src="image/logo.svg" alt="網站logo" /></a>
+      </div>
+      <nav class="main-nav" id="main-nav">
+        <div>
+          <a href="menu.html">菜單</a>
+          <a href="reservation.html">線上訂位</a>
+          <a href="introduce.html">認識浪浪</a>
+        </div>
+
+        <div>
+          <a href="dotnet.html">罐罐贊助</a>
+          <a href="adopt.html">帶浪浪回家</a>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </nav>
+      <button class="hb" id="hb">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+    <header class="index-header">
+      <div class="index-txt">
+        <h1><img src="image/logo.svg" alt="浪浪咖啡島logo" /></h1>
+        <div class="text">
+          <a href="reservation.html"># 赤峰街908號</a>
+          <a href="reservation.html"># 喝杯咖啡，遇見浪浪</a>
+        </div>
+        <div class="scroll"></div>
+      </div>
+      <div class="index-pic"></div>
+    </header>
+
+    <div
+      class="index-container"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+    >
+      <nav class="index-nav">
+        <div class="logo"><img src="image/logo.svg" alt="" /></div>
+        <div><a href="menu.html">菜單</a></div>
+        <div><a href="reservation.html">線上訂位</a></div>
+        <div><a href="introduce.html">認識浪浪</a></div>
+        <div><a href="dotnet.html">罐罐贊助</a></div>
+        <div><a href="adopt.html">帶浪浪回家</a></div>
+      </nav>
+      <main class="main-wrapper">
+        <section class="aboutus">
+          <div>
+            <div class="fs-p-lh txt">
+              <p>
+                2023年的春天，基隆『浪浪咖啡島』中途咖啡館正式營運，<br />
+                是一間咖啡廳，也是<span>浪浪們的避風島嶼</span>，
+              </p>
+              <br />
+              <p>
+                在這裡，除了店狗以外，每隻狗狗都在等一個<span>溫暖的家</span>，<br />
+                『浪浪咖啡島』希望給浪浪們有更多被看見的機會，踏上回家的航線。
+              </p>
+              <br />
+              <p>
+                店內的部分獲利將投入支援照顧浪浪，願用自給自足的方式讓幫助持續，<br />
+                同時，我們會將固定比例的營業額捐贈給流浪動物，<br />
+                讓愛動物的人也能將把愛分享給在街頭挨餓或無家可歸的浪浪。
+              </p>
+              <br />
+              <p>
+                就算暫時沒辦法帶他們回家，<br />
+                也可以來『浪浪咖啡島』和<span>狗狗共度午後時光</span>，讓牠們感受到愛!
+              </p>
+            </div>
+            <button class="btn-oval" onclick="location.href='reservation.html'">
+              <span>立即訂位</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="coffee-meet">
+          <div class="wrapper">
+            <div class="slideshow-big">
+              <div class="slidervp" id="slidervp">
+                <div class="picwrap" id="picwrap">
+                  <div class="pic">
+                    <img src="image/index/index-slideshow-big01.jpg" alt="" />
+                  </div>
+                  <div class="pic">
+                    <img src="image/index/index-slideshow-big02.jpg" alt="" />
+                  </div>
+                  <div class="pic">
+                    <img src="image/index/index-slideshow-big03.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="waiting-home">
+          <div class="wrapper">
+            <section class="content">
+              <div class="txt">
+                <h2 class="fs-h-2">陪你一起等家</h2>
+                <p class="fs-p-lh">
+                  浪浪島有合作的愛媽/爸長期從事救援行列，<br />
+                  店內固定會有5隻等家狗狗+1隻店狗，<br />
+                  等店裡的浪浪找到家後，救援的浪浪就能進來等家
+                </p>
+                <button
+                  class="btn-oval"
+                  onclick="location.href='introduce.html'"
+                >
+                  <span>認識浪浪</span>
+                </button>
+              </div>
+              <div class="slideshow-small">
+                <div class="slideview">
+                  <div class="pics owl-carousel owl-theme">
+                    <div class="item">
+                      <div class="pic">
+                        <img src="image/index/slideshow-small01.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pic">
+                        <img src="image/index/slideshow-small02.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pic">
+                        <img src="image/index/slideshow-small03.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pic">
+                        <img src="image/index/slideshow-small04.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pic">
+                        <img src="image/index/slideshow-small05.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pic">
+                        <img src="image/index/slideshow-small06.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div></div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section class="consumables">
+          <p>浪浪們每個月都大量需要這些消耗品</p>
+          <div class="wrapper">
+            <figure>
+              <div class="pic">
+                <img src="image/index/dotnetfeed01.jpg" alt="" />
+              </div>
+              <figcaption>尿布墊</figcaption>
+            </figure>
+            <figure>
+              <div class="pic">
+                <img src="image/index/dotnetfeed02.jpg" alt="" />
+              </div>
+              <figcaption>罐頭、飼料</figcaption>
+            </figure>
+            <figure>
+              <div class="pic">
+                <img src="image/index/dotnetfeed03.jpg" alt="" />
+              </div>
+              <figcaption>預防用藥</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="dotnet-feed">
+          <div class="txt fs-p-lh">
+            <p>
+              為了不讓愛有變質的機會，<br />
+              我們用販售咖啡的獲利自給自足，<br />
+              長期與愛媽合作，<br />
+              照顧浪浪、幫浪浪找家。<br />
+              <br /><br />
+              如果你也想為流浪動物盡些心力，<br />
+              歡迎您透過<span>認購物資</span>方式支持，<br />
+              這些將有效減輕愛媽愛爸們的經濟壓力，<br />
+              讓<span>幫助</span>持續下去。
+            </p>
+            <button class="btn-oval" onclick="location.href='dotnet.html'">
+              <span>物資募集，贊助罐罐</span>
+            </button>
+          </div>
+          <div class="pic"></div>
+        </section>
+      </main>
+    </div>
+    <section class="store-info">
+      <div class="pic-bg">
+        <div class="content">
+          <div class="txt">
+            <h2 class="fs-h-3">前往浪浪咖啡島</h2>
+            <div>
+              <i class="fa-solid fa-clock"></i>
+              <p class="fs-p-lh">營業時間：上午 10點 - 晚上 8點</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="fs-p-lh">基隆市赤峰街 908 號</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-bus-simple"></i>
+              <p class="fs-p-lh">基隆火車站前站 走路7分鐘即可抵達</p>
+            </div>
+          </div>
+          <div class="socialmedia">
+            <a
+              href="https://www.facebook.com/profile.php?id=100000395746214"
+              class="pic"
+            >
+              <img src="image/index/icon-facebook.svg" alt="" />
+            </a>
+            <a href="https://www.instagram.com/l" class="pic">
+              <img src="image/index/icon-instagram.svg" alt="" />
+            </a>
+            <a href="https://goo.gl/maps/V3NQ1WtqWTAiynUHA" class="pic">
+              <img src="image/index/icon-googlemaps.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-wrapper">
+      <div class="footer">
+        <div class="content">
+          <a class="logo" href="index.html"
+            ><img src="image/logo-white.svg" alt=""
+          /></a>
+          <div class="text">
+            <p>營業時間：上午 10點 - 晚上 8點</p>
+            <p>地址：基隆市赤峰街908號</p>
+            <p>電話：02-25712345</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            本網站為緯育TibaMe前端班 CDH103
+            學員專題作品，本平台僅供學習、展示之用。
+          </p>
+
+          <p>
+            Image by
+            <a
+              href="https://www.freepik.com/free-photo/woman-trying-call-rescue-dog-adoption-shelter_10296085.htm"
+              >Freepik</a
+            >、
+            <a
+              href="https://www.freepik.com/free-vector/illustration-dogs-collection_2800615.htm"
+              >Image by rawpixel.com</a
+            >
+            on Freepik
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- AOS -->
+    <script>
+      AOS.init({ duration: 3000 });
+    </script>
+    <!-- 輪播 -->
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true, // 循環播放
+        margin: 20, // 外距 20px
+        nav: false, // 導航文字
+        autoplay: true, //自動播放
+        autoplayTimeout: 3000, //切換時間
+        autoplayHoverPause: true, // 滑鼠經過時暫停
+        responsive: {
+          0: {
+            items: 1, // 螢幕大小為 0~600 顯示 1 個項目
+          },
+          600: {
+            items: 2, // 螢幕大小為 600~1000 顯示 2 個項目
+          },
+          1000: {
+            items: 3, // 螢幕大小為 1000 以上 顯示 3 個項目
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

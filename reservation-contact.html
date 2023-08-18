@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="image/favicon.ico" />
+    <!-- css reset & css-->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/reservation-contact.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>訂位聯絡資訊｜浪浪咖啡島</title>
+
+    <!-- JS -->
+    <script async src="js/base.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script async src="js/reservation-contact.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <div class="main-logo">
+          <a href="index.html"><img src="image/logo.svg" alt="網站logo" /></a>
+        </div>
+        <nav class="main-nav" id="main-nav">
+          <div>
+            <a href="menu.html">菜單</a>
+            <a class="active" href="reservation.html">線上訂位</a>
+            <a href="introduce.html">認識浪浪</a>
+          </div>
+
+          <div>
+            <a href="dotnet.html">罐罐贊助</a>
+            <a href="adopt.html">帶浪浪回家</a>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </nav>
+        <div class="hb" id="hb">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <h1 class="fs-h-2 nav-wrapper-h1">線上訂位</h1>
+    </header>
+
+    <main>
+      <button class="booking-now-info-btn"><span>訂位資訊</span></button>
+      <section class="booking-now-info hidden">
+        <section class="store-info">
+          <h2 class="logo"><img src="image/logo.svg" alt="" /></h2>
+          <div class="txt">
+            <p>地址：基隆市赤峰街908號</p>
+            <p>營業時間：上午 10點 - 晚上 8點</p>
+            <p></p>
+            <div class="txt-hasicon">
+              <div>
+                <i class="fa-solid fa-phone"></i>
+                <span>02-25711234</span>
+              </div>
+
+              <div><i class="fa-solid fa-map"></i><a href="#">查看地圖</a></div>
+            </div>
+          </div>
+          <button class="btn-oval" onclick="window.open('menu.html')">
+            <span>點我看菜單</span>
+          </button>
+        </section>
+        <section class="booking-now-info-check">
+          <div>
+            <span>您已預訂 浪浪咖啡島</span>
+            <a href="reservation.html">修改</a>
+          </div>
+          <div>
+            <div>
+              <i class="fa-regular fa-user"></i
+              ><span class="btn-waiting-check">2大</span
+              ><span class="btn-waiting-check">0小</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-couch"></i
+              ><span class="btn-waiting-check">吧檯(較不會與浪浪接觸)</span>
+            </div>
+            <div>
+              <i class="fa-regular fa-calendar-days"></i
+              ><span class="btn-waiting-check">2023年7月24日 週二</span>
+            </div>
+            <div>
+              <i class="fa-regular fa-clock"></i
+              ><span class="btn-waiting-check">14：00</span>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="booking-now-contact">
+        <form>
+          <label for="reservation-name" class="required"
+            ><h3>訂位人姓名</h3></label
+          >
+          <div class="name">
+            <input type="text" name="name" id="reservation-name" required />
+            <div class="gender">
+              <label for="female">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="female"
+                  required
+                />小姐</label
+              >
+              <label for="male"
+                ><input type="radio" name="gender" id="male" />先生</label
+              >
+            </div>
+          </div>
+
+          <div class="phone">
+            <label class="phone required" for="phone"
+              ><h3>訂位人手機號碼</h3></label
+            >
+            <input
+              class="phone"
+              type="tel"
+              name="phone"
+              id="phone"
+              minlength="10"
+              maxlength="10"
+              required
+            />
+          </div>
+
+          <div class="email">
+            <label for="email"><h3>訂位人Email</h3></label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="savecookie">
+            <input type="checkbox" />
+            <span>將訂位人資訊儲存在瀏覽器中</span>
+          </div>
+          <h3>用餐目的</h3>
+          <section class="purpose">
+            <button type="button" class="btn-border">
+              <span>領養(帶浪浪回家)</span>
+            </button>
+            <button type="button" class="btn-border">
+              <span>毛孩回娘家(過去曾在咖啡島領養)</span>
+            </button>
+            <button type="button" class="btn-border">
+              <span>慶生</span>
+            </button>
+            <button type="button" class="btn-border">
+              <span>約會</span>
+            </button>
+            <button type="button" class="btn-border">
+              <span>家庭聚餐</span>
+            </button>
+            <button type="button" class="btn-border">
+              <span>朋友聚餐</span>
+            </button>
+            <button type="button" class="btn-border">
+              <span>商務聚餐</span>
+            </button>
+            <button type="button" class="btn-border">
+              <span>其他</span>
+            </button>
+          </section>
+          <div class="notes">
+            <label for="notes"><h3>備註</h3></label>
+            <textarea
+              class="notes"
+              name="notes"
+              id="notes"
+              placeholder="．欲領養者請備註要看哪隻浪浪&#10;．毛孩回娘家請寫下狗狗名字(有沒有帶狗狗都可以)&#10;．若有攜帶孩童請備註年齡以及是否有跟狗狗相處的經驗&#10;&#10;(若同行者有較害怕與狗狗接觸者，可選擇吧檯座)"
+            ></textarea>
+          </div>
+        </form>
+      </section>
+      <section class="next-step">
+        <button class="btn-square">
+          <span>確認訂位</span>
+        </button>
+        <button type="button" onclick="history.back()" class="btn-square-v2">
+          <span>回上一步</span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer-wrapper">
+      <div class="footer">
+        <div class="content">
+          <a class="logo" href="index.html"
+            ><img src="image/logo-white.svg" alt=""
+          /></a>
+          <div class="text">
+            <p>營業時間：上午 10點 - 晚上 8點</p>
+            <p>地址：基隆市赤峰街908號</p>
+            <p>電話：02-25712345</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            本網站為緯育TibaMe前端班 CDH103
+            學員專題作品，本平台僅供學習、展示之用。
+          </p>
+
+          <p>
+            Image by
+            <a
+              href="https://www.freepik.com/free-photo/woman-trying-call-rescue-dog-adoption-shelter_10296085.htm"
+              >Freepik</a
+            >、
+            <a
+              href="https://www.freepik.com/free-vector/illustration-dogs-collection_2800615.htm"
+              >Image by rawpixel.com</a
+            >
+            on Freepik
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

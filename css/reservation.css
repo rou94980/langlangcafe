@@ -1,0 +1,98 @@
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 用餐規定dining-rules */
+.dining-rules {
+  width: 90%;
+  border: 1px solid var(--color-gray);
+  padding: 4vh 4vw;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 25px;
+}
+.dining-rules h2 {
+  text-align: center;
+  line-height: 5;
+  color: var(--color-main);
+}
+
+.dining-info,
+.dining-adopt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px auto;
+}
+.dining-rules .pic {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin-bottom: -30px;
+}
+.dining-rules .pic-img {
+  width: 60%;
+  position: relative;
+  bottom: 50px;
+  left: 0;
+}
+.pic-img img {
+  width: 100%;
+}
+
+/* 文字框及文字 */
+.dining-rules .pic-txt {
+  position: relative;
+  top: 0px;
+  left: -10px;
+  width: 230px;
+  height: 130px;
+  border-radius: 68% 100% 74% 86% / 100% 77% 89% 71%;
+  border: 1px dashed #ffffff;
+  background-color: var(--color-main);
+  /* 文字置中 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.dining-rules .pic-txt h3 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.dining-rules .txt {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 30px 0;
+}
+
+.dining-rules ul li {
+  list-style-type: "· ";
+  list-style-position: outside;
+  margin-left: 1rem;
+}
+.next-step {
+  width: 90%;
+  margin: 10% auto;
+}
+/* ----------------RWD------------------ */
+
+@media screen and (min-width: 768px) {
+  .dining-rules .txt {
+    width: 500px;
+    margin: 10vh 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dining-rules .txt {
+    margin: 0 0 30px 0;
+  }
+}

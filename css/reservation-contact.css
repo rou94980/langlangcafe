@@ -1,0 +1,200 @@
+main {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 3.1%;
+}
+
+/* 外觀 */
+.booking-now-info,
+.booking-now-contact {
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid var(--color-gray-d);
+  /* main已設定 justify-content */
+}
+
+.booking-now-info-btn {
+  min-width: 32px;
+  position: fixed;
+  min-width: 20px;
+  left: 0;
+  top: 150px;
+  padding: 8px 8px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  border: transparent;
+  background-color: var(--color-main);
+}
+.booking-now-info-btn > span {
+  color: #ffffff;
+  writing-mode: vertical-lr;
+}
+
+/* booking-now-info 訂位資訊 */
+.booking-now-info {
+  z-index: 10;
+  position: fixed;
+  background-color: var(--color-main);
+  left: 0;
+  top: 150px;
+  padding: 8px 30px;
+  border-radius: 0 10px 10px 0;
+  border: transparent;
+}
+.hidden {
+  left: -100%;
+}
+
+.booking-now-info-check a,
+.booking-now-info-check span,
+.booking-now-info-check i {
+  color: #ffffff;
+}
+.booking-now-info-check {
+  padding: 4vh 0;
+}
+
+/* 您已預訂 浪浪咖啡島 + 修改 文字*/
+.booking-now-info-check > div:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.booking-now-info-check i {
+  width: 30px;
+  text-align: center;
+}
+.booking-now-info-check i + span {
+  margin: 5px 10px;
+}
+
+/* 取消樣式 */
+.btn-waiting-check {
+  cursor: default;
+}
+.btn-waiting-check:hover {
+  box-shadow: 0 0 0 0;
+}
+
+/* 1024px以下隱藏 */
+.store-info {
+  display: none;
+}
+
+/* form內容 */
+.booking-now-contact h3 {
+  margin: 30px 0 10px 0;
+}
+.gender {
+  display: none;
+}
+
+input[type="tel"],
+input[type="email"] {
+  width: 100%;
+  max-width: 500px;
+}
+
+.name input,
+.phone input,
+.email input,
+.purpose {
+  position: relative;
+  left: -5px;
+  /* 對齊左側 */
+}
+.savecookie {
+  position: relative;
+  left: -10px;
+  margin: 10px 0;
+}
+
+.purpose {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.purpose .btn-border {
+  width: calc(50% - 20px);
+  min-width: 100px;
+}
+textarea.notes {
+  padding: 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 300px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  border: 1px solid var(--color-gray-d);
+}
+
+.next-step {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4vh 0;
+}
+/* ----------------RWD------------------ */
+
+@media screen and (min-width: 768px) {
+  .gender {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .booking-now-info-btn {
+    display: none;
+  }
+  .booking-now-info {
+    position: static;
+    width: calc(40% - 20px);
+    /* RWD樣式調整 */
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid var(--color-gray-d);
+  }
+  .booking-now-contact {
+    width: calc(60% - 20px);
+  }
+
+  .store-info {
+    padding: 4vh 0;
+    border-bottom: 1px solid var(--color-gray-d);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .store-info .logo {
+    margin: 20px auto;
+  }
+  .store-info .txt {
+    line-height: 30px;
+    margin: auto;
+  }
+  .store-info .txt-hasicon {
+    display: flex;
+    justify-content: space-between;
+    line-height: 3;
+  }
+  .store-info .txt-hasicon i {
+    width: 25px;
+  }
+  .store-info button {
+    margin: 20px auto;
+  }
+  /* RWD樣式調整 */
+  .booking-now-info-check a,
+  .booking-now-info-check span {
+    color: var(--color-black);
+  }
+  .booking-now-info i {
+    color: #aaaaaa;
+  }
+}

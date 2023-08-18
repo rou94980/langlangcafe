@@ -1,0 +1,135 @@
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+h2 {
+  width: 80%;
+  text-align: center;
+  margin: 15vw auto 4vw auto;
+}
+.bg {
+  width: 80%;
+  margin: 4vw auto 4vw auto;
+  background-image: url("../image/adopt/bg2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom -10px right 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--color-gray-d);
+}
+.bg > p {
+  background-color: #ffffffbe;
+  padding: 4vh 4vw;
+  margin: 10% 0;
+}
+
+/* ------------ 表單 ------------*/
+.form {
+  box-sizing: border-box;
+  padding: 4vw;
+  /* 50px */
+  overflow: hidden;
+  margin: auto;
+}
+
+.form section {
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid var(--color-gray-d);
+  border-radius: 20px;
+  padding: 4vw 4vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-bottom: 20px;
+}
+/* 單一問題 */
+.form h3 {
+  margin: 30px 0 10px 0;
+  line-height: 1.5;
+}
+.form label {
+  margin: 10px 0 10px 0;
+}
+/* .form label, */
+.form h3 {
+  font-family: B2Hana-Medium, "Noto Sans TC", sans-serif;
+}
+
+.form section > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+section.hidden {
+  display: none;
+}
+div.hidden {
+  display: none;
+}
+
+/* 申請人姓名/性別 */
+.form section :first-child > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+input[type="text"],
+input[type="number"],
+input[type="tel"] {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* 填選後之問題 */
+label > input[type="text"] {
+  margin: 10px 0 10px 38px;
+  /* margin-left: 15px; */
+}
+@media screen and (min-width: 580px) {
+  label > input[type="text"] {
+    margin-left: 15px;
+  }
+}
+
+.page-change {
+  width: fit-content;
+  margin: 5vh auto 0 auto;
+}
+
+.page-change :last-child {
+  display: block;
+  margin: 10px auto;
+}
+
+.page-change button {
+  margin: 0 20px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  /* 取消預設樣式 */
+  -webkit-appearance: none; /* Safari 和 Chrome，iOS下移除內建樣式 */
+  -moz-appearance: none; /* FireFox */
+  appearance: none;
+}
+
+.next-step {
+  position: relative;
+  top: -60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.next-step > .btn-square {
+  width: 90%;
+}
+.next-step > p {
+  width: 90%;
+  text-align: center;
+  line-height: 4;
+}

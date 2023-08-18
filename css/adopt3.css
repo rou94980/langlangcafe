@@ -1,0 +1,137 @@
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+h2 {
+  width: 80%;
+  text-align: center;
+  margin: 15vw auto 4vw auto;
+}
+.bg {
+  width: 80%;
+  height: 40vh;
+  margin: 4vw auto 10vw auto;
+  border-bottom: 1px solid var(--color-gray-d);
+  /* 圖片定位 */
+  position: relative;
+  /* 文字定位 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg > p {
+  background-color: #ffffffbe;
+  padding: 4vh 4vw;
+  text-align: center;
+  z-index: 10;
+}
+/* bg圖片 */
+.bg::after {
+  content: "";
+  width: 300px;
+  height: 200px;
+  background-image: url("../image/adopt/bg3.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  position: absolute;
+  left: -5%;
+  bottom: 0;
+}
+
+/* ------------ 表單 ------------*/
+.form {
+  margin: auto;
+}
+form > section {
+  margin: 30px;
+}
+
+.meeting-info {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 80px 0;
+  border-bottom: 1px solid var(--color-gray-d); */
+}
+.meeting-people,
+.meeting-pet,
+.meeting-date {
+  width: 100%;
+  /* 對齊右邊線 */
+  position: relative;
+  left: -5px;
+}
+
+.meeting-people > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.meeting-people > div div {
+  width: 100%;
+}
+.meeting-info select,
+.meeting-date input {
+  width: calc(100% - 10px);
+}
+.meeting-time > div {
+  margin: 20px 0;
+}
+.meeting-time .btn-border {
+  padding: 10px 50px;
+}
+
+.meeting-time .time {
+  position: relative;
+  left: -10px;
+  margin: 2px 0;
+  /* 對齊左側處理 */
+}
+/* 文字 處理 */
+
+.meeting-info h3 {
+  margin: 20px 0 10px 5px;
+  /* 5%為了對齊左側 */
+}
+.meeting-time h3 {
+  margin: 20px 0;
+}
+.meeting-info p,
+.meeting-time p,
+.meeting-now p {
+  font-size: 0.875rem;
+  /* 14px */
+  padding: 5px 0;
+  line-height: 1.28;
+  color: var(--color-gray);
+}
+
+.next-step {
+  margin: 4vw 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.next-step > .btn-square,
+.next-step > .btn-square-v2 {
+  width: 90%;
+}
+.next-step > p {
+  width: 90%;
+  text-align: center;
+  line-height: 4;
+}
+
+/* ----------------RWD------------------ */
+@media screen and (min-width: 768px) {
+  .meeting-people {
+    width: 50%;
+    /* 對齊右邊線 */
+    left: -5px;
+  }
+  .meeting-pet,
+  .meeting-date {
+    width: 25%;
+  }
+}

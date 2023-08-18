@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="image/favicon.ico" />
+    <!-- css reset & css -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/adopt.css" />
+    <link rel="stylesheet" href="css/adopt3.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>帶浪浪回家｜浪浪咖啡島</title>
+    <!-- JS -->
+    <script async src="js/base.js"></script>
+    <script async src="js/adopt3.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <div class="main-logo">
+          <a href="index.html"><img src="image/logo.svg" alt="網站logo" /></a>
+        </div>
+        <nav class="main-nav" id="main-nav">
+          <div>
+            <a href="menu.html">菜單</a>
+            <a href="reservation.html">線上訂位</a>
+            <a href="introduce.html">認識浪浪</a>
+          </div>
+
+          <div>
+            <a href="dotnet.html">罐罐贊助</a>
+            <a class="active" href="adopt.html">帶浪浪回家</a>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </nav>
+        <div class="hb" id="hb">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <h1 class="fs-h-2 nav-wrapper-h1">帶浪浪回家</h1>
+      <section class="progress-bar">
+        <ol class="list">
+          <li>
+            <div class="pic">
+              <img class="sailboatsvg active" src="image/step1.svg" alt="" />
+            </div>
+          </li>
+          <div class="line active"></div>
+          <li>
+            <div class="pic">
+              <img class="sailboatsvg active" src="image/step2.svg" alt="" />
+            </div>
+          </li>
+          <div class="line active"></div>
+          <li>
+            <div class="pic">
+              <img class="sailboatsvg active" src="image/step3.svg" alt="" />
+            </div>
+          </li>
+        </ol>
+      </section>
+    </header>
+    <main>
+      <h2 class="fs-h-3">預約與浪浪見面</h2>
+      <div class="bg">
+        <p class="fs-p-lh">
+          為了解您與浪浪相處的狀況，預約當天敬請保留至少3小時<br />若家中有孩童或貓狗，若情況允許請當日一同前往
+        </p>
+      </div>
+      <form class="form" action="index.html">
+        <section class="meeting-info">
+          <div class="meeting-people">
+            <h3 class="required">到訪人數</h3>
+            <div>
+              <div>
+                <select name="adult" id="adult">
+                  <option value="" disabled selected required>請選擇</option>
+                  <option value="0">0位大人</option>
+                  <option value="1">1位大人</option>
+                  <option value="2">2位大人</option>
+                  <option value="3">3位大人</option>
+                  <option value="4">4位大人</option>
+                  <option value="5">5位大人</option>
+                  <option value="6">6位大人</option>
+                </select>
+              </div>
+              <div>
+                <select name="child" id="child">
+                  <option value="" disabled selected required>請選擇</option>
+                  <option value="0">0位小孩</option>
+                  <option value="1">1位小孩</option>
+                  <option value="2">2位小孩</option>
+                  <option value="3">3位小孩</option>
+                  <option value="4">4位小孩</option>
+                  <option value="5">5位小孩</option>
+                  <option value="6">6位小孩</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="meeting-pet">
+            <label for="meeting-pet"
+              ><h3 class="required">是否攜帶寵物</h3></label
+            >
+
+            <select name="" id="table-type">
+              <option value="" disabled selected required>請選擇</option>
+              <option value="">是</option>
+              <option value="">否</option>
+            </select>
+          </div>
+          <div class="meeting-date">
+            <label for="meeting-date"><h3 class="required">日期</h3></label>
+            <input
+              type="text"
+              name=""
+              id="meeting-date"
+              required
+              placeholder="年 / 月 / 日"
+              onfocus="(this.type='date')"
+            />
+          </div>
+        </section>
+
+        <section class="meeting-time">
+          <h3 class="required">見面時段</h3>
+          <article>
+            <p>
+              *灰色部分已經客滿，若您可安排的時段均已無法預約，請撥打電話與我們聯繫
+            </p>
+          </article>
+          <div class="morning">
+            <h4>上午</h4>
+            <div class="time">
+              <button class="btn-border" type="button">
+                <span>10:00</span>
+              </button>
+            </div>
+          </div>
+          <div class="afternoon">
+            <h4>下午</h4>
+            <div class="time">
+              <button class="btn-border" type="button">
+                <span>12:00</span>
+              </button>
+              <button class="btn-border" type="button">
+                <span>15:00</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </form>
+
+      <div class="next-step">
+        <p>請再次確認資料填寫無誤</p>
+        <button type="button" class="btn-square" id="nextStepBtn">
+          <span>確認預約</span>
+        </button>
+        <button type="button" onclick="history.back()" class="btn-square-v2">
+          <span>回上一步</span>
+        </button>
+      </div>
+    </main>
+
+    <footer class="footer-wrapper">
+      <div class="footer">
+        <div class="content">
+          <a class="logo" href="index.html"
+            ><img src="image/logo-white.svg" alt=""
+          /></a>
+          <div class="text">
+            <p>營業時間：上午 10點 - 晚上 8點</p>
+            <p>地址：基隆市赤峰街908號</p>
+            <p>電話：02-25712345</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            本網站為緯育TibaMe前端班 CDH103
+            學員專題作品，本平台僅供學習、展示之用。
+          </p>
+
+          <p>
+            Image by
+            <a
+              href="https://www.freepik.com/free-photo/woman-trying-call-rescue-dog-adoption-shelter_10296085.htm"
+              >Freepik</a
+            >、
+            <a
+              href="https://www.freepik.com/free-vector/illustration-dogs-collection_2800615.htm"
+              >Image by rawpixel.com</a
+            >
+            on Freepik
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

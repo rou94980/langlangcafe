@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="image/favicon.ico" />
+    <!-- css reset & css-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/adopt.css" />
+    <link rel="stylesheet" href="css/adopt2.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <title>帶浪浪回家｜浪浪咖啡島</title>
+    <!-- JS -->
+    <script async src="js/base.js"></script>
+    <script async src="js/adopt2.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <div class="main-logo">
+          <a href="index.html"><img src="image/logo.svg" alt="網站logo" /></a>
+        </div>
+        <nav class="main-nav" id="main-nav">
+          <div>
+            <a href="menu.html">菜單</a>
+            <a href="reservation.html">線上訂位</a>
+            <a href="introduce.html">認識浪浪</a>
+          </div>
+
+          <div>
+            <a href="dotnet.html">罐罐贊助</a>
+            <a class="active" href="adopt.html">帶浪浪回家</a>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </nav>
+        <div class="hb" id="hb">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <h1 class="fs-h-2 nav-wrapper-h1">帶浪浪回家</h1>
+      <section class="progress-bar">
+        <ol class="list">
+          <li>
+            <div class="pic">
+              <img class="sailboatsvg active" src="image/step1.svg" alt="" />
+            </div>
+          </li>
+          <div class="line active"></div>
+          <li>
+            <div class="pic">
+              <img class="sailboatsvg active" src="image/step2.svg" alt="" />
+            </div>
+          </li>
+          <div class="line"></div>
+          <li>
+            <div class="pic">
+              <img class="sailboatsvg" src="image/step3.svg" alt="" />
+            </div>
+          </li>
+        </ol>
+      </section>
+    </header>
+    <main>
+      <h2 class="fs-h-3">領養申請</h2>
+      <div class="bg">
+        <p class="fs-p-lh">
+          感謝閱讀上述領養須知，<br />請填寫以下資料，並預約日期前往咖啡廳，<br />我們會安排工作人員會與您詳談
+        </p>
+      </div>
+      <form class="form">
+        <div id="viewport">
+          <div id="allpage">
+            <!-- 申請人聯絡資料 -->
+            <section class="formPage">
+              <div>
+                <label class="required" for="aname"><h3>申請人姓名</h3></label>
+                <div>
+                  <input type="text" name="name" id="aname" required />
+                  <div>
+                    <label
+                      ><input type="radio" name="gender" required />小姐</label
+                    >
+                    <label><input type="radio" name="gender" />先生</label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label class="required" for="dogname "
+                  ><h3>想要領養浪浪的名字</h3></label
+                ><input type="text" name="dogname" id="dogname" required />
+              </div>
+              <div>
+                <label class="required" for="aphone"><h3>申請人手機</h3></label
+                ><input type="tel" name="phone" id="aphone" required />
+              </div>
+              <div>
+                <label class="required" for="alineid"><h3>line ID</h3></label
+                ><input type="text" name="lineid" id="alineid" required />
+              </div>
+              <div>
+                <label for="aemail" class="required"><h3>E-mail</h3></label>
+                <input type="email" name="email" id="aemail" required />
+              </div>
+            </section>
+
+            <!-- 申請人背景 -->
+            <section class="formPage hidden">
+              <div>
+                <label class="required" for="aage"><h3>年齡</h3></label
+                ><input type="number" name="age" id="aage" required />
+              </div>
+              <div>
+                <label class="required" for="ajob"><h3>職業</h3></label>
+                <input type="text" name="job" id="ajob" required />
+              </div>
+              <div>
+                <label for="amarital-status" class="required"
+                  ><h3>婚姻狀況</h3></label
+                >
+                <label for="single"
+                  ><input
+                    type="radio"
+                    name="amarital-status"
+                    id="single"
+                    required
+                  />單身/未婚</label
+                >
+                <label for="married">
+                  <input
+                    type="radio"
+                    name="amarital-status"
+                    id="married"
+                  />已婚</label
+                >
+              </div>
+              <div>
+                <label class="required"><h3>申請人是否為主要照顧者</h3></label>
+                <label for="caregiver-yes"
+                  ><input
+                    type="radio"
+                    name="caregiver"
+                    id="caregiver-yes"
+                    required
+                  />是</label
+                >
+                <div>
+                  <label for="caregiver-no"
+                    ><input
+                      type="radio"
+                      name="caregiver"
+                      id="caregiver-no"
+                    />否</label
+                  >
+                  <label for="caregiver-name"
+                    >，主要照顧者為
+                    <input
+                      type="text"
+                      name="caregiver-name"
+                      id="caregiver-name"
+                  /></label>
+                </div>
+              </div>
+            </section>
+
+            <!-- 家庭狀況 -->
+            <section class="formPage hidden">
+              <div>
+                <label for="family-people " class="required"
+                  ><h3>家中的成員與人數</h3></label
+                >
+                <input
+                  type="text"
+                  id="family-people"
+                  placeholder="範例：1爸爸1媽媽2小孩"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="minor"><h3>家中是否有未成年</h3></label>
+                <div>
+                  <label for="minor-yes"
+                    ><input
+                      type="radio"
+                      name="minor"
+                      id="minor-yes"
+                      required
+                    />有</label
+                  >
+                  <label for="minor-age"
+                    >，年齡為<input
+                      type="text"
+                      name="minor-age"
+                      id="minor-age"
+                      placeholder="範例：哥哥10歲 弟弟3歲"
+                  /></label>
+                </div>
+                <label for="minor-no"
+                  ><input type="radio" name="minor" id="minor-no" />沒有</label
+                >
+              </div>
+              <div>
+                <label for="house" class="required"><h3>自宅/租屋</h3></label>
+
+                <label for="own"
+                  ><input
+                    type="radio"
+                    name="house"
+                    id="own"
+                    required
+                  />自宅</label
+                >
+                <label for="rent"
+                  ><input type="radio" name="house" id="rent" />租屋</label
+                >
+              </div>
+              <div>
+                <label for="allergy" class="required"
+                  ><h3>家中是否有人會對動物毛過敏？</h3></label
+                >
+
+                <label for="allergy-yes"
+                  ><input
+                    type="radio"
+                    name="allergy"
+                    id="allergy-yes"
+                    required
+                  />有</label
+                >
+                <label for="allergy-no"
+                  ><input
+                    type="radio"
+                    name="allergy"
+                    id="allergy-no"
+                  />沒有</label
+                >
+              </div>
+              <div>
+                <label for="animal" class="required">
+                  <h3>
+                    家中目前是否有動物?<br />若有，請填寫種類年齡。(與浪浪見面當天建議可一同攜帶至店中)
+                  </h3>
+                </label>
+                <div>
+                  <label for="animal-yes"
+                    ><input
+                      type="radio"
+                      name="animal"
+                      id="animal-yes"
+                      required
+                    />有</label
+                  ><label for="animal-age"
+                    >，請註明種類及年齡<input
+                      type="text"
+                      name="animal-age"
+                      id="animal-age"
+                      placeholder="範例：1隻米克斯狗 3歲 "
+                  /></label>
+                </div>
+                <label for="animal-no"
+                  ><input
+                    type="radio"
+                    name="animal"
+                    id="animal-no"
+                  />沒有</label
+                >
+              </div>
+            </section>
+
+            <!-- 領養原因 -->
+            <section class="reason formPage hidden">
+              <div>
+                <label for="agree-adopt" class="required"
+                  ><h3>同住家人是否均同意飼養動物</h3></label
+                >
+                <label for="agree-yes"
+                  ><input
+                    type="radio"
+                    name="agree-adopt"
+                    id="agree-yes"
+                    required
+                  />均已取得同意</label
+                >
+                <label for="agree-no"
+                  ><input
+                    type="radio"
+                    name="agree-adopt"
+                    id="agree-no"
+                  />不同意或部分未取得同意</label
+                >
+              </div>
+              <div>
+                <label for="reason" class="required"
+                  ><h3>想領養的主要原因</h3></label
+                ><input type="text" id="reason" required />
+              </div>
+
+              <div>
+                <label for="visit" class="required"
+                  ><h3>是否同意讓工作人員到府上家訪？</h3></label
+                >
+                <label for="visit-yes"
+                  ><input
+                    type="radio"
+                    name="visit"
+                    id="visit-yes"
+                    required
+                  />同意(領養前均需安排家訪，若無法配合則會失去領養資格)</label
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="page-change">
+          <button type="button" id="pageUp" disabled>
+            <i
+              class="fa-solid fa-chevron-left fa-sm"
+              style="color: #aaaaaa"
+            ></i>
+          </button>
+          <span id="pageNum">1</span>
+          <span>/</span>
+          <span>4</span>
+          <button type="button" id="pageDown">
+            <i
+              class="fa-solid fa-chevron-right fa-sm"
+              style="color: var(--color-accent-1)"
+            ></i>
+          </button>
+          <button type="button" id="pageDownBtn">
+            <span>下一頁</span>
+          </button>
+        </div>
+      </form>
+      <div class="next-step hidden">
+        <p>請再次確認資料填寫無誤</p>
+        <button class="btn-square" type="button" id="nextStepBtn">
+          <span>前往浪浪見面預約</span>
+        </button>
+      </div>
+    </main>
+
+    <footer class="footer-wrapper">
+      <div class="footer">
+        <div class="content">
+          <a class="logo" href="index.html"
+            ><img src="image/logo-white.svg" alt=""
+          /></a>
+          <div class="text">
+            <p>營業時間：上午 10點 - 晚上 8點</p>
+            <p>地址：基隆市赤峰街908號</p>
+            <p>電話：02-25712345</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            本網站為緯育TibaMe前端班 CDH103
+            學員專題作品，本平台僅供學習、展示之用。
+          </p>
+
+          <p>
+            Image by
+            <a
+              href="https://www.freepik.com/free-photo/woman-trying-call-rescue-dog-adoption-shelter_10296085.htm"
+              >Freepik</a
+            >、
+            <a
+              href="https://www.freepik.com/free-vector/illustration-dogs-collection_2800615.htm"
+              >Image by rawpixel.com</a
+            >
+            on Freepik
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/base.js"></script>
+    <script src="js/adopt2.js"></script>
+  </body>
+</html>

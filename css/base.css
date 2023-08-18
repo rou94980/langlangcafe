@@ -1,0 +1,532 @@
+/* 字形設定 */
+@font-face {
+  font-family: B2Hana-Medium;
+  src: url("../webfont/B2Hana-Medium/B2Hana-Medium.woff") format("woff");
+}
+
+:root {
+  --color-black: #2f3639;
+  --color-main: #b4a699;
+  --color-accent-1: #726d60;
+  --color-gray: #aaaaaa;
+  --color-gray-d: #d9d9d9;
+}
+
+/* 隱藏滾軸 */
+@media screen and (min-width: 1200px) {
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    -ms-overflow-style: none;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+ul,
+li,
+span,
+figcaption {
+  font-family: B2Hana-Medium, serif, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+ul,
+li,
+span,
+figcaption {
+  color: var(--color-black);
+}
+
+/* ----------------字體------------------ */
+
+.fs-h-1 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  /* 40px/36px */
+}
+.fs-h-2 {
+  font-size: 1.875rem;
+  line-height: 1.6;
+  /* 30px/35px */
+}
+
+.fs-h-3 {
+  font-size: 1.5625rem;
+  line-height: 1.2;
+  /* 25px/30px */
+}
+
+/* .fs-p-1 {
+  font-size: 30px;
+} */
+
+.fs-num {
+  font-family: "Inter", sans-serif;
+}
+.fs-p-lh {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  /* line-height: 1.875rem; */
+  /* 16px/30px */
+}
+
+/* ----------------header&nav------------------ */
+
+.nav-wrapper {
+  width: 100%;
+  height: 60px;
+  /* .main-logo定位 */
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffffdd;
+  backdrop-filter: blur(20px);
+}
+
+.main-logo {
+  width: 120px;
+  padding: 10px;
+  height: fit-content;
+  position: fixed;
+}
+.main-logo img {
+  width: 100%;
+  vertical-align: auto;
+}
+.hb {
+  position: fixed;
+  z-index: 30;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  /* 去除預設樣式 */
+  border: 0;
+  background-color: transparent;
+
+  /* span排版 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.hb span {
+  width: 20px;
+  height: 1.5px;
+  background-color: var(--color-black);
+}
+
+/* 選單 */
+.main-nav {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  background-color: var(--color-main);
+  box-sizing: border-box;
+  padding-top: 30px;
+  /* 子選單排版 */
+  /* 預設隱藏 */
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  translate: -100% 0%;
+}
+
+.main-nav > div {
+  /* 子子選單排版 */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav a {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 15px 1.5rem;
+  transition: 0.3s;
+}
+
+.main-nav i {
+  color: #ffffff;
+  font-size: 1.25rem;
+  vertical-align: text-bottom;
+}
+
+h1.nav-wrapper-h1 {
+  text-align: center;
+  margin: 90px auto 30px auto;
+}
+
+#main-nav.show {
+  translate: 0% 0%;
+  transition: 1s;
+}
+/* ----------------footer------------------ */
+.footer-wrapper {
+  width: 100%;
+  background-color: var(--color-accent-1);
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-top: 100px;
+}
+.footer a,
+.footer p {
+  color: #ffffff;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 1.5rem;
+  flex-direction: column;
+}
+
+.footer .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-right: auto;
+}
+.footer .logo {
+  width: 60%;
+  margin: 20px 0;
+}
+
+.footer .logo img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.footer .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px 0;
+}
+
+.footer .copyright {
+  justify-content: flex-start;
+  flex-direction: column;
+  width: fit-content;
+}
+
+/* ----------------RWD------------------ */
+
+@media screen and (min-width: 768px) {
+  .main-nav {
+    width: 40vw;
+  }
+  /* ----------------footer------------------ */
+  .footer {
+    max-width: 1200px;
+    padding: 21px 47px;
+    margin: auto;
+  }
+  .footer .content {
+    margin: auto;
+    justify-content: space-around;
+    align-content: center;
+  }
+  .footer .logo {
+    width: 178px;
+    margin: 0;
+  }
+  .footer .text {
+    width: fit-content;
+    padding-left: 94px;
+    margin: auto;
+  }
+  .footer .copyright {
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    margin: 21px auto 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* ----------------header&nav------------------ */
+  .nav-wrapper {
+    position: relative;
+    height: auto;
+  }
+  .nav-wrapper .hb {
+    display: none;
+  }
+  .main-nav {
+    position: absolute;
+    display: flex;
+    width: 900px;
+    height: 86px;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    /* 置中 */
+    left: calc(50% - 450px);
+    padding: 20px 50px;
+    box-sizing: border-box;
+    background-color: transparent;
+    translate: 0% 0%;
+    transition: -1s;
+  }
+  .main-nav a.active {
+    color: var(--color-main);
+  }
+  .main-nav > div {
+    flex-direction: row;
+    width: fit-content;
+  }
+  .main-logo {
+    position: static;
+    width: 120px;
+    padding: 20px;
+    z-index: 300;
+  }
+
+  .main-nav a {
+    padding: 0px 12.5px;
+    transition: 0.3s;
+    color: var(--color-black);
+  }
+
+  .main-nav a:hover {
+    color: var(--color-main);
+  }
+  .main-nav i {
+    color: #2f3639;
+  }
+  h1.nav-wrapper-h1 {
+    margin: 5rem auto;
+  }
+}
+
+/* ----------------按鈕元件------------------ */
+
+.btn-oval {
+  width: fit-content;
+  height: 40px;
+  background-color: var(--color-main);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 3px 3px 2px 0px rgba(51, 85, 103, 0.18);
+  cursor: pointer;
+}
+.btn-oval span {
+  color: #ffffff;
+  padding: 12px 46px;
+  font-size: 16px;
+}
+
+.btn-oval:hover {
+  height: 40px;
+  border: 1px solid var(--color-main);
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 3px 3px 2px 0px rgba(51, 85, 103, 0.18);
+}
+.btn-oval:hover span {
+  color: var(--color-main);
+}
+
+/* btn-oval-v2 在白底時用 */
+
+.btn-oval-v2 {
+  width: fit-content;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid var(--color-main);
+  background-color: #ffffff;
+  box-shadow: 3px 3px 2px 0px rgba(51, 85, 103, 0.18);
+  cursor: pointer;
+}
+.btn-oval-v2 span {
+  color: var(--color-main);
+  padding: 12px 46px;
+  font-size: 16px;
+}
+
+.btn-oval-v2:hover {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  box-shadow: 3px 3px 2px 0px rgba(51, 85, 103, 0.18);
+}
+.btn-oval-v2:hover span {
+  color: #ffffff;
+}
+
+/* btn-border */
+.btn-border {
+  background-color: transparent;
+  border: 1px solid var(--color-gray-d);
+  padding: 10px 0;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.btn-border span {
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.btn-border:hover {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+button.checked {
+  background-color: var(--color-accent-1);
+}
+button.checked > span {
+  color: #ffffff;
+}
+
+/* .btn-square */
+
+.btn-square {
+  width: 100%;
+  padding: 10px 70px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-accent-1);
+  margin: 5px 0;
+  cursor: pointer;
+}
+.btn-square span {
+  color: #ffffff;
+}
+.btn-square:hover {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn-square-v2 {
+  width: 100%;
+  padding: 10px 70px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid var(--color-gray);
+  background-color: #ffffff;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.btn-square-v2:hover {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* .btn-waiting-check */
+.btn-waiting-check {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: rgba(217, 217, 217, 0.3);
+  cursor: pointer;
+}
+.btn-waiting-check:hover {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+select {
+  padding: 8px;
+  margin: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid var(--color-gray);
+  background-color: transparent;
+  cursor: pointer;
+  /* 取消預設樣式 */
+  -webkit-appearance: none; /* Safari 和 Chrome，iOS下移除內建樣式 */
+  -moz-appearance: none; /* FireFox */
+  appearance: none;
+}
+
+input {
+  border: 1px solid var(--color-gray);
+  background-color: transparent;
+  padding: 8px;
+  margin: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input:not([type="radio"], [type="checkbox"]) {
+  /* 取消預設樣式 */
+  -webkit-appearance: none; /* Safari 和 Chrome，iOS下移除內建樣式 */
+  -moz-appearance: none; /*FireFox */
+  appearance: none;
+}
+
+/* 一般輸入框(含文字數字等)hover樣式 */
+input:not([type="radio"], [type="checkbox"]):hover,
+select:hover,
+textarea:hover {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  appearance: none;
+}
+
+/* radio與文字的間距 */
+input[type="radio"] {
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 8px;
+  vertical-align: text-top;
+}
+input[type="checkbox"] {
+  margin: 0 10px;
+  padding: 8px;
+  vertical-align: text-top;
+}
+
+input[type="radio"] label {
+  line-height: 36px;
+}
+select:focus-within {
+  outline: 2px solid var(--color-main);
+}
+input:not([type="radio"], [type="checkbox"]):focus-within {
+  outline: 2px solid var(--color-main);
+}
+
+.required > h3::after {
+  content: " *";
+  color: var(--color-main);
+  display: inline-block;
+  padding-left: 10px;
+}
+.pic > img {
+  width: 100%;
+}

@@ -1,0 +1,579 @@
+/* ----------------header------------------ */
+.index-header {
+  width: 100%;
+  max-width: 2000px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 50px auto;
+  padding: 3.1%;
+  box-sizing: border-box;
+}
+
+/* index-txt */
+.index-txt {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  height: 20vh;
+}
+.index-header h1 {
+  display: none;
+}
+
+.index-txt .text {
+  margin: 60px auto 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-txt .text a {
+  font-size: 16px;
+  line-height: 25px;
+}
+.index-txt .scroll {
+  width: 20px;
+  height: 200px;
+  background-image: url("../image/scroll_white.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 10;
+  bottom: 8%;
+  left: 8%;
+  animation: scroll 3s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(20%);
+  }
+  30% {
+    transform: translateY(10%);
+  }
+  40% {
+    transform: translateY(20%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  60% {
+    transform: translateY(20%);
+  }
+  90% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/* index-pic */
+.index-pic {
+  width: 100%;
+  margin-top: 30px;
+  height: 70vh;
+  margin-bottom: 3.1%;
+  box-sizing: border-box;
+  border-radius: 50px;
+  overflow: hidden;
+  background-image: url("../image/index/index-header01.jpg");
+  /* 遮罩定位用 */
+  position: relative;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+/* 遮罩  */
+.index-header .index-pic::after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.2);
+
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+/* ----------------header結束------------------ */
+
+/* 導覽列處理 */
+.index-nav {
+  display: none;
+}
+.main-wrapper {
+  width: 100%;
+}
+.index-container {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 3.1%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  position: relative;
+}
+.aboutus,
+.coffee-meet,
+.waiting-home,
+.consumables,
+.dotnet-feed {
+  padding: 4% 0;
+  margin: 10% 0;
+}
+.dotnet-feed {
+  display: flex;
+}
+/* aboutus */
+.aboutus {
+  box-sizing: border-box;
+  padding: 4% 30px;
+  /* 文字所以抓多點padding左右 */
+  position: relative;
+}
+/* aboutus 文字 */
+.aboutus > div {
+  width: fit-content;
+  margin: auto;
+}
+.aboutus p > br {
+  display: none;
+}
+.aboutus p span,
+.dotnet-feed p span {
+  color: var(--color-main);
+}
+.btn-oval {
+  width: fit-content;
+  margin: 50px auto 0 auto;
+}
+
+/* coffee-meet */
+/* slideshow-big */
+.slideshow-big {
+  position: relative;
+}
+.slideshow-big .slidervp {
+  /* background-image: url("../image/index/index-slideshow-big01.jpg"); */
+  width: 90%;
+  height: 70vh;
+  margin: auto;
+  overflow: scroll;
+  border-radius: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* 遮罩定位 */
+  position: relative;
+  /* background-attachment: fixed; 
+ background-position: left 30% center; */
+  /* 滾軸消失 */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/*滾軸消失  for Chrome, Safari and Opera */
+.slideshow-big .picwrap::-webkit-scrollbar,
+.slidervp::-webkit-scrollbar {
+  display: none;
+}
+
+.slideshow-big .pic {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+.slideshow-big .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+  object-position: bottom 0 center;
+}
+.slideshow-big .picwrap {
+  height: fit-content;
+  transform: translateY(0);
+  transition: 1s;
+  position: relative;
+}
+
+/* 遮罩  */
+.slideshow-big .picwrap::after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  position: absolute;
+}
+
+.slideshow-big .dots {
+  display: inline-block;
+  position: absolute;
+  right: 8%;
+  bottom: 15%;
+}
+.slideshow-big .dot {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  margin: 4px;
+}
+.slideshow-big .dot:first-child {
+  background-color: #ffffff;
+}
+.coffee-meet h2,
+.waiting-home h2 {
+  color: var(--color-main);
+  line-height: 4;
+}
+.waiting-home .txt,
+.dotnet-feed .txt {
+  padding: 4vh 30px;
+}
+.dotnet-feed .txt {
+  margin: auto auto 0 auto;
+  text-align: center;
+}
+
+/* slideshow-small 輪播 */
+.slideshow-small {
+  margin: 10% 0;
+}
+.owl-theme .item {
+  width: 100%;
+  padding: 0rem;
+}
+.item .pic {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* consumables */
+.consumables p {
+  text-align: center;
+  padding-bottom: 10%;
+}
+.consumables .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+.consumables .pic {
+  width: 15vw;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px 30px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.consumables .pic > img {
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+}
+eshow-small .consumables figcaption {
+  text-align: center;
+  line-height: 4;
+}
+
+/* dotnet-feed */
+.dotnet-feed {
+  margin: -10% 0 10% 0;
+}
+
+.dotnet-feed .pic {
+  display: none;
+}
+
+/* store-info */
+.store-info {
+  padding: 4vh 0;
+  margin: 10% auto 10% auto;
+  box-sizing: border-box;
+}
+.store-info .pic-bg {
+  margin: auto;
+  background-image: url("../image/index/index-storeinfo-storesign.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  width: 90%;
+  height: 80vh;
+  border-radius: 50px;
+  margin-bottom: 100px;
+  /* 文字 遮罩定位 */
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+/* 遮罩 */
+.store-info .pic-bg::after {
+  content: "";
+  background-color: rgba(138, 138, 122, 0.5);
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  inset: 0;
+  position: absolute;
+}
+
+.store-info .content {
+  background-color: #ffffff8b;
+  backdrop-filter: blur(10px);
+  padding: 2.5% 4%;
+  z-index: 10;
+}
+.store-info h2 {
+  line-height: 3;
+  text-align: center;
+}
+.store-info .txt {
+  text-align: left;
+  margin: auto;
+  width: fit-content;
+  line-height: 30px;
+}
+
+.store-info .txt div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.store-info .txt i {
+  width: 20px;
+  text-align: center;
+  margin-right: 10px;
+  line-height: 30px;
+  color: var(--color-gray);
+}
+
+.socialmedia {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.socialmedia .pic {
+  width: 36px;
+  height: 36px;
+  margin: 30px 10px;
+}
+
+/* ----------------RWD------------------ */
+@media screen and (min-width: 550px) {
+  .aboutus p > br {
+    display: inline;
+  }
+  .consumables .wrapper {
+    justify-content: space-evenly;
+  }
+  .consumables .pic {
+    width: 10vw;
+    margin: 20px 0;
+  }
+  .slideshow-small {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .aboutus .txt {
+    padding: 30px;
+    margin: auto auto auto 0;
+  }
+
+  .aboutus {
+    margin: 0 auto 15% auto;
+  }
+  .aboutus > div {
+    z-index: -10;
+    width: 90%;
+    content: " ";
+    border: 1px solid var(--color-gray-d);
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .aboutus > div::after {
+    content: "";
+    background-image: url("../image/index/menu-dessert2try-removebg-preview.png");
+    background-size: contain;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    max-width: 400px;
+    height: 50%;
+    bottom: -4%;
+    right: -3%;
+  }
+  .aboutus .btn-oval {
+    margin-left: 50px;
+  }
+
+  .btn-oval {
+    margin-left: auto;
+    margin-bottom: 7vh;
+  }
+
+  .dotnet-feed .txt {
+    text-align: left;
+  }
+
+  .dotnet-feed .pic {
+    display: inline-block;
+    width: 400px;
+    height: 600px;
+    border-radius: 100px 0px 0px 0px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../image/index/index-dotnetfeed04.jpg");
+    transition: 0.01s;
+    background-position: right;
+    /* 遮罩定位 */
+    position: relative;
+  }
+  .dotnet-feed .pic:hover {
+    background-image: url("../image/index/index-dotnetfeed05.jpg");
+  }
+
+  /* 遮罩  */
+  .dotnet-feed .pic::after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* ----------------header------------------ */
+  .index-header {
+    height: 100vh;
+    margin: 0 auto 100px auto;
+  }
+  .index-pic {
+    width: 77%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: auto;
+  }
+  .index-txt {
+    align-content: flex-start;
+    margin-top: 0;
+    width: 17.5%;
+    height: 100%;
+    /* scroll定位用 */
+    position: relative;
+  }
+
+  .index-txt .text {
+    margin: 0;
+  }
+  .index-header h1 {
+    width: 100%;
+    display: block;
+    margin: 0px auto 60px;
+  }
+  .index-header h1 img {
+    width: 100%;
+    vertical-align: top;
+  }
+  .index-header .scroll {
+    background-image: url("../image/scroll.svg");
+    bottom: 0;
+    left: 0;
+  }
+
+  /* ----------------header結束------------------ */
+
+  /* 手機版nav隱藏 */
+  .nav-wrapper {
+    display: none;
+  }
+
+  /* 桌機 nav顯示及設定 */
+  .index-nav {
+    display: block;
+    width: 15%;
+    height: 388px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    position: sticky;
+    top: 0;
+  }
+
+  /* index-nav */
+  /* 導覽列佔15% */
+  .index-nav .logo {
+    padding-bottom: 20px;
+    width: 100%;
+    height: fit-content;
+  }
+  .index-nav img {
+    width: 100%;
+    vertical-align: top;
+  }
+  .index-nav a {
+    font-size: 14px;
+    line-height: 32px;
+    position: relative;
+    padding-left: 15px;
+    transition: 0.3s;
+  }
+  .index-nav a:hover {
+    color: var(--color-main);
+  }
+
+  .index-nav a::after {
+    content: " ";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    left: 0;
+    top: 50%;
+    border-radius: 50%;
+    background-color: var(--color-main);
+  }
+  /* 桌機 nav結束 */
+
+  /* main-wrapper */
+  /* 主要內容佔右邊85% */
+  .main-wrapper {
+    width: 85%;
+    padding-left: 50px;
+    box-sizing: border-box;
+  }
+
+  .slideshow-big .slidervp {
+    height: 80vh;
+    /* background-position: left 200px center; */
+    background-position: center;
+  }
+  .slideshow-big .pic {
+    height: 80vh;
+  }
+  .dotnet-feed .txt {
+    /* 文字所以抓多點margin-left */
+    margin: auto auto 0 30px;
+  }
+  .store-info .pic-bg {
+    background-attachment: fixed;
+  }
+}
