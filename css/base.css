@@ -1,7 +1,7 @@
 /* 字形設定 */
 @font-face {
-  font-family: B2Hana-Medium;
-  src: url("../webfont/B2Hana-Medium/B2Hana-Medium.woff") format("woff");
+  font-family: HanaMinA;
+  src: url("./HanaMinA.woff") format("woff");
 }
 
 :root {
@@ -28,7 +28,7 @@
   list-style: none;
   color: var(--color-black);
   text-decoration: none;
-  font-weight: normal;
+  /* font-weight: normal; */
 }
 h1,
 h2,
@@ -42,7 +42,8 @@ ul,
 li,
 span,
 figcaption {
-  font-family: B2Hana-Medium, serif, sans-serif;
+  font-family: HanaMinA, serif, sans-serif;
+  font-weight: 500;
 }
 h1,
 h2,
