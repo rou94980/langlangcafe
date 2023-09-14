@@ -17,6 +17,7 @@
   width: 100%;
   height: 20vh;
 }
+
 .index-header h1 {
   display: none;
 }
@@ -31,6 +32,7 @@
   font-size: 16px;
   line-height: 25px;
 }
+
 .index-txt .scroll {
   width: 20px;
   height: 200px;
@@ -47,28 +49,36 @@
   0% {
     transform: translateY(0%);
   }
+
   20% {
     transform: translateY(20%);
   }
+
   30% {
     transform: translateY(10%);
   }
+
   40% {
     transform: translateY(20%);
   }
+
   50% {
     transform: translateY(10%);
   }
+
   60% {
     transform: translateY(20%);
   }
+
   90% {
     transform: translateY(20%);
   }
+
   100% {
     transform: translateY(0%);
   }
 }
+
 /* index-pic */
 .index-pic {
   width: 100%;
@@ -103,9 +113,11 @@
 .index-nav {
   display: none;
 }
+
 .main-wrapper {
   width: 100%;
 }
+
 .index-container {
   width: 100%;
   max-width: 1600px;
@@ -116,6 +128,7 @@
   box-sizing: border-box;
   position: relative;
 }
+
 .aboutus,
 .coffee-meet,
 .waiting-home,
@@ -124,9 +137,11 @@
   padding: 4% 0;
   margin: 10% 0;
 }
+
 .dotnet-feed {
   display: flex;
 }
+
 /* aboutus */
 .aboutus {
   box-sizing: border-box;
@@ -134,18 +149,22 @@
   /* 文字所以抓多點padding左右 */
   position: relative;
 }
+
 /* aboutus 文字 */
-.aboutus > div {
+.aboutus>div {
   width: fit-content;
   margin: auto;
 }
-.aboutus p > br {
+
+.aboutus p>br {
   display: none;
 }
+
 .aboutus p span,
 .dotnet-feed p span {
   color: var(--color-main);
 }
+
 .btn-oval {
   width: fit-content;
   margin: 50px auto 0 auto;
@@ -156,6 +175,7 @@
 .slideshow-big {
   position: relative;
 }
+
 .slideshow-big .slidervp {
   /* background-image: url("../image/index/index-slideshow-big01.jpg"); */
   width: 90%;
@@ -171,9 +191,12 @@
   /* background-attachment: fixed; 
  background-position: left 30% center; */
   /* 滾軸消失 */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
 /*滾軸消失  for Chrome, Safari and Opera */
 .slideshow-big .picwrap::-webkit-scrollbar,
 .slidervp::-webkit-scrollbar {
@@ -185,6 +208,7 @@
   height: 70vh;
   overflow: hidden;
 }
+
 .slideshow-big .pic img {
   width: 100%;
   height: 100%;
@@ -192,6 +216,7 @@
   vertical-align: top;
   object-position: bottom 0 center;
 }
+
 .slideshow-big .picwrap {
   height: fit-content;
   transform: translateY(0);
@@ -217,6 +242,7 @@
   right: 8%;
   bottom: 15%;
 }
+
 .slideshow-big .dot {
   width: 8px;
   height: 8px;
@@ -224,18 +250,22 @@
   border-radius: 50%;
   margin: 4px;
 }
+
 .slideshow-big .dot:first-child {
   background-color: #ffffff;
 }
+
 .coffee-meet h2,
 .waiting-home h2 {
   color: var(--color-main);
   line-height: 4;
 }
+
 .waiting-home .txt,
 .dotnet-feed .txt {
   padding: 4vh 30px;
 }
+
 .dotnet-feed .txt {
   margin: auto auto 0 auto;
   text-align: center;
@@ -245,10 +275,12 @@
 .slideshow-small {
   margin: 10% 0;
 }
+
 .owl-theme .item {
   width: 100%;
   padding: 0rem;
 }
+
 .item .pic {
   width: 100%;
   overflow: hidden;
@@ -261,12 +293,14 @@
   text-align: center;
   padding-bottom: 10%;
 }
+
 .consumables .wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
 }
+
 .consumables .pic {
   width: 15vw;
   border-radius: 50%;
@@ -275,11 +309,12 @@
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
-.consumables .pic > img {
+.consumables .pic>img {
   height: 100%;
   width: 100%;
   vertical-align: top;
 }
+
 eshow-small .consumables figcaption {
   text-align: center;
   line-height: 4;
@@ -300,9 +335,10 @@ eshow-small .consumables figcaption {
   margin: 10% auto 10% auto;
   box-sizing: border-box;
 }
+
 .store-info .pic-bg {
   margin: auto;
-  background-image: url("../image/index/index-storeinfo-storesign.png");
+  background-image: url("../image/index/index-storeinfo-storesign.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -317,6 +353,7 @@ eshow-small .consumables figcaption {
   justify-content: center;
   align-content: center;
 }
+
 /* 遮罩 */
 .store-info .pic-bg::after {
   content: "";
@@ -334,10 +371,12 @@ eshow-small .consumables figcaption {
   padding: 2.5% 4%;
   z-index: 10;
 }
+
 .store-info h2 {
   line-height: 3;
   text-align: center;
 }
+
 .store-info .txt {
   text-align: left;
   margin: auto;
@@ -349,6 +388,7 @@ eshow-small .consumables figcaption {
   display: flex;
   flex-wrap: wrap;
 }
+
 .store-info .txt i {
   width: 20px;
   text-align: center;
@@ -362,6 +402,7 @@ eshow-small .consumables figcaption {
   display: flex;
   flex-wrap: wrap;
 }
+
 .socialmedia .pic {
   width: 36px;
   height: 36px;
@@ -370,20 +411,24 @@ eshow-small .consumables figcaption {
 
 /* ----------------RWD------------------ */
 @media screen and (min-width: 550px) {
-  .aboutus p > br {
+  .aboutus p>br {
     display: inline;
   }
+
   .consumables .wrapper {
     justify-content: space-evenly;
   }
+
   .consumables .pic {
     width: 10vw;
     margin: 20px 0;
   }
+
   .slideshow-small {
     margin: 0;
   }
 }
+
 @media screen and (min-width: 768px) {
   .aboutus .txt {
     padding: 30px;
@@ -393,7 +438,8 @@ eshow-small .consumables figcaption {
   .aboutus {
     margin: 0 auto 15% auto;
   }
-  .aboutus > div {
+
+  .aboutus>div {
     z-index: -10;
     width: 90%;
     content: " ";
@@ -401,7 +447,8 @@ eshow-small .consumables figcaption {
     padding-top: 20px;
     padding-left: 20px;
   }
-  .aboutus > div::after {
+
+  .aboutus>div::after {
     content: "";
     background-image: url("../image/index/menu-dessert2try-removebg-preview.png");
     background-size: contain;
@@ -414,6 +461,7 @@ eshow-small .consumables figcaption {
     bottom: -4%;
     right: -3%;
   }
+
   .aboutus .btn-oval {
     margin-left: 50px;
   }
@@ -441,6 +489,7 @@ eshow-small .consumables figcaption {
     /* 遮罩定位 */
     position: relative;
   }
+
   .dotnet-feed .pic:hover {
     background-image: url("../image/index/index-dotnetfeed05.jpg");
   }
@@ -458,17 +507,20 @@ eshow-small .consumables figcaption {
 }
 
 @media screen and (min-width: 1200px) {
+
   /* ----------------header------------------ */
   .index-header {
     height: 100vh;
     margin: 0 auto 100px auto;
   }
+
   .index-pic {
     width: 77%;
     height: 100%;
     margin-top: 0;
     margin-left: auto;
   }
+
   .index-txt {
     align-content: flex-start;
     margin-top: 0;
@@ -481,15 +533,18 @@ eshow-small .consumables figcaption {
   .index-txt .text {
     margin: 0;
   }
+
   .index-header h1 {
     width: 100%;
     display: block;
     margin: 0px auto 60px;
   }
+
   .index-header h1 img {
     width: 100%;
     vertical-align: top;
   }
+
   .index-header .scroll {
     background-image: url("../image/scroll.svg");
     bottom: 0;
@@ -510,11 +565,9 @@ eshow-small .consumables figcaption {
     height: 388px;
     padding: 30px 20px;
     box-sizing: border-box;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.85) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(255, 255, 255, 0) 100%);
     position: sticky;
     top: 0;
   }
@@ -526,10 +579,12 @@ eshow-small .consumables figcaption {
     width: 100%;
     height: fit-content;
   }
+
   .index-nav img {
     width: 100%;
     vertical-align: top;
   }
+
   .index-nav a {
     font-size: 14px;
     line-height: 32px;
@@ -537,6 +592,7 @@ eshow-small .consumables figcaption {
     padding-left: 15px;
     transition: 0.3s;
   }
+
   .index-nav a:hover {
     color: var(--color-main);
   }
@@ -551,6 +607,7 @@ eshow-small .consumables figcaption {
     border-radius: 50%;
     background-color: var(--color-main);
   }
+
   /* 桌機 nav結束 */
 
   /* main-wrapper */
@@ -566,13 +623,16 @@ eshow-small .consumables figcaption {
     /* background-position: left 200px center; */
     background-position: center;
   }
+
   .slideshow-big .pic {
     height: 80vh;
   }
+
   .dotnet-feed .txt {
     /* 文字所以抓多點margin-left */
     margin: auto auto 0 30px;
   }
+
   .store-info .pic-bg {
     background-attachment: fixed;
   }

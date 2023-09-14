@@ -1,9 +1,10 @@
 :root {
   --gap: 10px;
+  --max-width: 1200px;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(----max-width);
   margin: auto;
 
   padding-left: var(--gap);
