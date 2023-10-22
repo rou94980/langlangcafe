@@ -15,13 +15,13 @@ function isMobileDevice() {
 // checked 樣式在 base.css 中
 function btnBorderCheck(e) {
   if (e.target.classList.contains("checked")) {
-    e.target.classList.remove("checked");
+    // e.target.classList.remove("checked");
     document.getElementById("selecttime").innerText = "時段";
 
     // document.querySelector(".btn-waiting-check[for = time").innerText =
     //   e.target.value;
   } else {
-    e.target.classList.add("checked");
+    // e.target.classList.add("checked");
     document.getElementById("selecttime").innerText = e.target.value;
   }
 }
