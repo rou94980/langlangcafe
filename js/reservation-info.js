@@ -42,6 +42,17 @@ function scrollShowNextstep() {
 window.addEventListener(
   "load",
   function () {
+    //只能擇一時段
+    const buttons = document.querySelectorAll(".time-btn");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) => {
+          btn.classList.remove("checked");
+        });
+        button.classList.add("checked");
+      });
+    });
+
     //選到 選項next-step 則顯示
     for (i = 0; i < bookingSelects.length; i++) {
       bookingSelects[i].addEventListener(

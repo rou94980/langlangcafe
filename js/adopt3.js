@@ -1,6 +1,17 @@
 window.addEventListener(
   "load",
   () => {
+    //只能擇一時段
+    const buttons = document.querySelectorAll(".time-btn");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) => {
+          btn.classList.remove("checked");
+        });
+        button.classList.add("checked");
+      });
+    });
+
     let nextStepBtn = document.getElementById("nextStepBtn");
 
     function submitform() {
