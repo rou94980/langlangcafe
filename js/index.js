@@ -1,6 +1,7 @@
 // let picwrap = document.getElementById("picwrap");
 let slidervp = document.getElementById("slidervp");
 let picwrap = document.getElementById("picwrap");
+
 function scrollpic() {
   let scrollTop = slidervp.scrollTop;
   let pichight = document.querySelector(".pic").clientHeight;
