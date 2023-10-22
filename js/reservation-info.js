@@ -43,10 +43,10 @@ window.addEventListener(
   "load",
   function () {
     //只能擇一時段
-    const buttons = document.querySelectorAll(".time-btn");
-    buttons.forEach((button) => {
+    const btns = document.querySelectorAll(".time-btn");
+    btns.forEach((button) => {
       button.addEventListener("click", () => {
-        buttons.forEach((btn) => {
+        btns.forEach((btn) => {
           btn.classList.remove("checked");
         });
         button.classList.add("checked");
